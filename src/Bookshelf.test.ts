@@ -38,7 +38,7 @@ describe('Bookshelf', () => {
     bookshelf.addBook(aLaRechercheDuTempsPerdu);
 
     expect(bookshelf.getBook('À la recherche du temps perdu')).toEqual(
-      aLaRechercheDuTempsPerdu
+      aLaRechercheDuTempsPerdu,
     );
   });
 
@@ -55,14 +55,15 @@ describe('Bookshelf', () => {
   });
 
   it('should return all books of a given author', () => {
-    bookshelf.addBook(theLordOfTheRings);
     bookshelf.addBook(theHobbit);
+    bookshelf.addBook(theLordOfTheRings);
     bookshelf.addBook(hamlet);
 
-    expect(bookshelf.getBooksOf('J. R. R. Tolkien')).toEqual([
-      theLordOfTheRings,
-      theHobbit,
-    ]);
+    let tolkiensBook = bookshelf.getBooksOf('J. R. R. Tolkien');
+    expect(tolkiensBook.length).toEqual(2);
+    expect(tolkiensBook).toEqual(
+      expect.arrayContaining([theLordOfTheRings, theHobbit]),
+    );
   });
 
   it('should return the total number of books', () => {
