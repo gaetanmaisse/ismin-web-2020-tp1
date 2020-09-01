@@ -51,5 +51,5 @@ That's it! You can code!
 
 ## 🛰 Extra:
 
-- Handle the `date` attribut as a date and not a string
+- Handle the `date` attribut as a Date and not a string
 - Add a test, and a function `getBooksPublishedBefore(aDate: string | Date)` returning an array of `Book`s
