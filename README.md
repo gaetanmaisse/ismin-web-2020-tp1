@@ -53,3 +53,19 @@ That's it! You can code!
 
 - Handle the `date` attribut as a Date and not a string
 - Add a test, and a function `getBooksPublishedBefore(aDate: string | Date)` returning an array of `Book`s
+
+## 🔑 Solution
+
+An implementation of the TP is available on `solution` branch. To switch to the solution just do: 
+
+```
+# Commit or revert your local changes
+# git add . && git commit -m "YOUR_MSG" 
+
+
+# Update your repository
+git pull
+
+# Switch to `solution` branch
+git checkout solution
+```
